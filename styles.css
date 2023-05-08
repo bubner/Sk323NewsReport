@@ -1,1 +1,14 @@
 /* Lucas Bubner, 2023 */
+
+#header {
+    background-color: #e6e6e6;
+    width: 100%;
+    position: fixed;
+    inset: 0px;
+    height: 10vh;
+    border-radius: 0 0 10px 10px;
+}
+
+.htext {
+    text-align: center;
+}
