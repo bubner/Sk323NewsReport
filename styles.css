@@ -1,14 +1,39 @@
 /* Lucas Bubner, 2023 */
 
+* {
+    font-family: "Inter", sans-serif;
+}
+
 #header {
-    background-color: #e6e6e6;
+    background: rgb(8,0,52);
+    /* background: radial-gradient(circle, rgb(20, 0, 131) 0%, rgba(63,198,217,1) 100%); */
     width: 100%;
     position: fixed;
     inset: 0px;
-    height: 10vh;
-    border-radius: 0 0 10px 10px;
+    height: 60px;
 }
 
 .htext {
     text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+#logo {
+    width: auto;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+}
+
+#author {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-25%);
+    right: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
 }
