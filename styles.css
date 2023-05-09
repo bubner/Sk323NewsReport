@@ -5,12 +5,72 @@
 }
 
 #header {
-    background: rgb(8,0,52);
-    /* background: radial-gradient(circle, rgb(20, 0, 131) 0%, rgba(63,198,217,1) 100%); */
     width: 100%;
     position: fixed;
     inset: 0px;
     height: 60px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+#header:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(55, 55, 55, 0.3);
+    filter: blur(10px);
+    margin: -20px;
+}
+
+#header-container {
+    background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#bigheading {
+    font-weight: 800;
+    font-size: 36px;
+}
+
+#smallheading {
+    font-size: 24px;
+}
+
+#bg {
+    inset: 0px;
+    position: fixed;
+    opacity: 0.33;
+    z-index: -1;
+}
+
+#heading-text {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+#heading-text p {
+    margin-top: -0.5em;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.text-area {
+    position: absolute;
+    top: 45%;
+    left: 10%;
 }
 
 .htext {
