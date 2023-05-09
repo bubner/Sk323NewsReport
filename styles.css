@@ -2,6 +2,26 @@
 
 * {
     font-family: "Inter", sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+html {
+    opacity: 0;
+    animation: inwardsFade 1s ease-in-out forwards;
+}
+
+@keyframes inwardsFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+p {
+    user-select: text;
 }
 
 #header {
@@ -24,7 +44,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(55, 55, 55, 0.3);
+    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.3);
     filter: blur(10px);
     margin: -20px;
 }
@@ -41,11 +61,11 @@
 
 #bigheading {
     font-weight: 800;
-    font-size: 36px;
+    font-size: 48px;
 }
 
 #smallheading {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 #bg {
@@ -56,7 +76,7 @@
 }
 
 #heading-text {
-    position: absolute;
+    position: relative;
     top: 25%;
     left: 10%;
 }
@@ -68,9 +88,27 @@
 }
 
 .text-area {
-    position: absolute;
-    top: 45%;
+    position: relative;
     left: 10%;
+    width: 40vw;
+}
+
+.text-area p {
+    font-size: 18px;
+}
+
+hr {
+    width: 40vw;
+    transform: translateX(-50%);
+    border: 1px solid black;
+}
+
+#bgelem {
+    position: relative;
+    top: 15vh;
+    left: -10%;
+    opacity: 0.33;
+    z-index: -1;
 }
 
 .htext {
@@ -82,7 +120,7 @@
 #logo {
     width: auto;
     height: 40px;
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     top: 10px;
