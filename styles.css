@@ -15,6 +15,7 @@ html {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -50,7 +51,7 @@ p {
 }
 
 #header-container {
-    background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+    background: url("assets/bg.jpeg") no-repeat;
     background-attachment: fixed;
     background-size: cover;
     display: grid;
@@ -98,17 +99,24 @@ p {
 }
 
 hr {
-    width: 40vw;
-    transform: translateX(-50%);
+    transform: translateX(calc(20vw - 50%));
+    width: 60vw;
     border: 1px solid black;
 }
 
-#bgelem {
+#bgelem,
+#bgelem-r {
     position: relative;
     top: 15vh;
     left: -10%;
     opacity: 0.33;
     z-index: -1;
+}
+
+#bgelem-r {
+    transform: rotate(180deg);
+    left: 50%;
+    top: 5vh;
 }
 
 .htext {
@@ -138,4 +146,20 @@ hr {
 
 #author a {
     color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    background-color: #dedede;
+    width: 100%;
+    border-radius: 15px;
+    height: 40px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #6b6b6b;
+    position: relative;
+    top: 25%;
+    transform: translateY(-50%);
 }
