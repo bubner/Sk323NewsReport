@@ -22,3 +22,21 @@ function displayContent() {
         allSections[i].style.opacity = "1";
     }
 }
+
+// Sticky header implementation on scroll
+let capture = null;
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("#header");
+    const sep = document.getElementById("separator");
+    if (window.scrollY > header.offsetTop) {
+        if (!header.classList.contains("sticky")) {
+            capture = window.scrollY;
+            header.classList.add("sticky");
+            sep.style.display = "block";
+        } else if (window.scrollY < capture) {
+            header.classList.remove("sticky");
+            sep.style.display = "none";
+            capture = null;
+        }
+    }
+});
