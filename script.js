@@ -2,12 +2,16 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("readtime").innerHTML = getReadTime();
-    displayContent();
+    const img = new Image();
+    img.onload = () => {
+        displayContent();
+    };
+    img.src = "./assets/bgblur.png";
 });
 
 // Calculate how long it would take to read the article based on word count
 function getReadTime() {
-    const allSections = document.querySelectorAll(".text");
+    const allSections = document.querySelectorAll(".text, .caption");
     let wordCount = 0;
     for (let i = 0; i < allSections.length; i++) {
         wordCount += allSections[i].innerText.split(" ").length;
